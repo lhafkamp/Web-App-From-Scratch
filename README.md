@@ -7,7 +7,7 @@ This are the annotations of the first lesson Web App From Scratch. The annotatio
 
 ### Objects and methods
 
-- An **object** is an unordered list of primitive data types (numbers, strings, booleans, undefined, null). Each item in the unordered list is called a **property**.
+- An **object** is an unordered list of primitive data types (numbers, strings, booleans, undefined, null). Each item in the unordered list is called a **property**. (1.1)
 
 ```javascript
     var student = {
@@ -59,15 +59,43 @@ function generateStudentInfo(infoArray) {
 
 ### This and Strict Mode
 
-- Using **Strict mode**, your code will be validated in a more strict way than normal. It makes it impossible to use a variable with the same name multiple times for example. It can be placed on the first line of your code.
+- Using **Strict mode**, your code will be validated in a more strict way than normal. It makes it impossible to use a variable with the same name multiple times for example. It can be placed on the first line of your code. (1.2)
 
 ```javascript
 "use strict";
 ```
 
-- The **this** keyword can (for example) be used in a function. When 'this' is used inside a function, it contains information given to that function.
+- The **this** keyword can (for example) be used in a function. When 'this' is used inside a function, it contains information given to that function. (1.3)
 
-## Sources
-- http://javascriptissexy.com/16-javascript-concepts-you-must-know-well/
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+### Sources Lesson 1
+- (1.1) http://javascriptissexy.com/16-javascript-concepts-you-must-know-well/
+- (1.2) https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+- (1.3) https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+
+## Assignments 1st week
+
+These are all the assignments I've completed in the first week of Wep App From Scratch.
+
+### Pros and cons of JavaScript frameworks
+
+For this assignment I've been doing some research on the pros and cons of using JavaScript frameworks or libraries. The sources are listed below.
+
+#### Pros
+- Using frameworks can save you a lot of time. They consist out of stable code and offer all sorts of functions. Before you start a project, half of the work is allready done (1.4).
+- Most frameworks are provided with a great documentation. This will help you learn faster then when you have to write and learn to understand all the code yourself.
+- The bigger frameworks are mostly well secured. When building your own code, it's more likely that there are security issues (1.5).
+- Lots of frameworks are open source. It saves a lot of money to use them instead of reinventing the wheel (1.5).
+
+#### Cons
+
+- When using frameworks, you won't learn the language. For example: When using Angular, you learn Angular, not JavaScript (1.5).
+- There are many different frameworks available. Some of them are used and updated for a long time, but it can also occur that a framework gets depricated. In that case you've to build the whole app from ground up again. That takes a lot of time (1.5).
+- Frameworks have limitations. The code is allready made, and most of the time it's really hard to change something in the framework. Because of that you can not allways achieve to build the functionality you want in an application (1.4).
+
+#### The reason why we won't use jQuery
+jQuery is a library that can be used to manipulate the DOM. The reason many programmers use it, is becuase it makes it easy to select and change DOM elements. The problem with jQuery is, is that its not really JavaScript. When building applications that need reusable codeblocks, jQuery can start to become a problem. If you get used to using jQuery, you forget or don't even learn how to do some things in JavaScript. That limitates what you can do and prevents you from becoming a great JavaScript developer (1.6). It can be used sometimes, but I understand the fact that we won't use it during the minor. The goal is to make us better developers, and then it's better to write the same functionality in Vanilla JavaScript.
+
+### Sources Assignments Week 1
+- (1.4) http://www.noupe.com/development/javascript-frameworks-94897.html
+- (1.5) http://1stwebdesigner.com/web-frameworks/
+- (1.6) http://moveelo.com/blog/why-you-should-stop-using-jquery-for-everything
