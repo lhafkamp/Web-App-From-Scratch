@@ -77,7 +77,7 @@ function generateStudentInfo(infoArray) {
 These are all the assignments I've completed in the first week of Wep App From Scratch.
 
 ### Pros and cons of JavaScript frameworks
-
+___
 For this assignment I've been doing some research on the pros and cons of using JavaScript frameworks or libraries. The sources are listed below.
 
 #### Pros
@@ -95,7 +95,24 @@ For this assignment I've been doing some research on the pros and cons of using 
 #### The reason why we won't use jQuery
 jQuery is a library that can be used to manipulate the DOM. The reason many programmers use it, is becuase it makes it easy to select and change DOM elements. The problem with jQuery is, is that its not really JavaScript. When building applications that need reusable codeblocks, jQuery can start to become a problem. If you get used to using jQuery, you forget or don't even learn how to do some things in JavaScript. That limitates what you can do and prevents you from becoming a great JavaScript developer (1.6). It can be used sometimes, but I understand the fact that we won't use it during the minor. The goal is to make us better developers, and then it's better to write the same functionality in Vanilla JavaScript.
 
+### Pros and cons of single page web applications
+___
+For this assignment I've been doing some research on the pros and cons of building single page web applications. The sources are listed below.
+
+#### Pros
+
+- Single page web applications are often smaller in size (KB) then multi page apps. Because of that the page and functionality will be faster (1.7).
+- The user experience is better, because singe page apps are easy to understand. There are no pages the user have to navigate through. It's also clear where the app starts and where it ends (1.8).
+- Its easier to develop the site for mobile. Thats because you can use the same backend as you're using for the desktop version (1.8)
+
+#### Cons
+
+- There isn't space for a lot of content. The best description I've found online to descripe this is: The biggest danger is falling into the trap of stuffing “10 pounds of stuff into a 5 pound bag.” (1.8).
+- Because there is just one page and not so much content, it's hard to increase the SEO (1.7).
+
 ### Sources Assignments Week 1
 - (1.4) http://www.noupe.com/development/javascript-frameworks-94897.html
 - (1.5) http://1stwebdesigner.com/web-frameworks/
 - (1.6) http://moveelo.com/blog/why-you-should-stop-using-jquery-for-everything
+- (1.7) http://www.eikospartners.com/blog/multi-page-web-applications-vs.-single-page-web-applications
+- (1.8) https://www.uxpin.com/studio/blog/single-page-vs-multi-page-ui-design-pros-cons/
