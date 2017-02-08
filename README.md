@@ -81,7 +81,7 @@ ___
 For this assignment I've been doing some research on the pros and cons of using JavaScript frameworks or libraries. The sources are listed below.
 
 #### Pros
-- Using frameworks can save you a lot of time. They consist out of stable code and offer all sorts of functions. Before you start a project, half of the work is allready done (1.4).
+- Using frameworks can save you a lot of time. They consist out of stable code and offer all sorts of functions. Before you start a project, half of the work is already done (1.4).
 - Most frameworks are provided with a great documentation. This will help you learn faster then when you have to write and learn to understand all the code yourself.
 - The bigger frameworks are mostly well secured. When building your own code, it's more likely that there are security issues (1.5).
 - Lots of frameworks are open source. It saves a lot of money to use them instead of reinventing the wheel (1.5).
@@ -89,11 +89,11 @@ For this assignment I've been doing some research on the pros and cons of using 
 #### Cons
 
 - When using frameworks, you won't learn the language. For example: When using Angular, you learn Angular, not JavaScript (1.5).
-- There are many different frameworks available. Some of them are used and updated for a long time, but it can also occur that a framework gets depricated. In that case you've to build the whole app from ground up again. That takes a lot of time (1.5).
-- Frameworks have limitations. The code is allready made, and most of the time it's really hard to change something in the framework. Because of that you can not allways achieve to build the functionality you want in an application (1.4).
+- There are many different frameworks available. Some of them are used and updated for a long time, but it can also occur that a framework gets deprecated. In that case you've to build the whole app from ground up again. That takes a lot of time (1.5).
+- Frameworks have limitations. The code is already made, and most of the time it's really hard to change something in the framework. Because of that you can not always achieve to build the functionality you want in an application (1.4).
 
 #### The reason why we won't use jQuery
-jQuery is a library that can be used to manipulate the DOM. The reason many programmers use it, is becuase it makes it easy to select and change DOM elements. The problem with jQuery is, is that its not really JavaScript. When building applications that need reusable codeblocks, jQuery can start to become a problem. If you get used to using jQuery, you forget or don't even learn how to do some things in JavaScript. That limitates what you can do and prevents you from becoming a great JavaScript developer (1.6). It can be used sometimes, but I understand the fact that we won't use it during the minor. The goal is to make us better developers, and then it's better to write the same functionality in Vanilla JavaScript.
+jQuery is a library that can be used to manipulate the DOM. The reason many programmers use it, is because it makes it easy to select and change DOM elements. The problem with jQuery is, is that its not really JavaScript. When building applications that need reusable code blocks, jQuery can start to become a problem. If you get used to using jQuery, you forget or don't even learn how to do some things in JavaScript. That limitates what you can do and prevents you from becoming a great JavaScript developer (1.6). It can be used sometimes, but I understand the fact that we won't use it during the minor. The goal is to make us better developers, and then it's better to write the same functionality in Vanilla JavaScript.
 
 ### Pros and cons of single page web applications
 ___
@@ -122,7 +122,7 @@ This are the annotations of the second lesson Web App From Scratch.
 
 ### Constructor function
 
-- Using a **constructor function** it's possible to create an **object type** that can be used multiple times. In that way you won't have to define that object for every instance.
+- Using a **constructor function** it's possible to create an **object type** that can be used multiple times. In that way you won't have to define that object for every instance (1.9).
 
 ```javascript
 function CarModels(model,year,miles) {
@@ -155,3 +155,6 @@ CarModels.prototype.toString = function() {
 ```javascript
 volkswagen.toString()
 ```
+
+### Sources Lesson 2
+- (1.9) http://www.javascriptkit.com/javatutors/oopjs2.shtml
