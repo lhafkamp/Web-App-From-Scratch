@@ -5,21 +5,29 @@
 }
 
 nav {
-  height: 8vh;
-  width: 100vh;
+  height: 7vh;
+  width: 100%;
   padding: .75em 0 0 .75em;
   background-color: #ecf0f1;
   position: fixed;
   top: 0;
 }
 
-nav ul li {
-  padding: .5em;
+nav .nav_item {
+  padding: .75em;
   background-color: white;
   color: black;
   list-style: none;
   display: inline-block;
   border-radius: .2em;
+}
+
+nav .active {
+  background-color: #95a5a6;
+}
+
+nav ul li:hover {
+  background-color: rgb(231, 231, 231);
 }
 
 nav li a {
@@ -48,5 +56,5 @@ nav li a {
 }
 
 .page_title {
-  padding-top: 45vh;
+  padding-top: 30vh;
 }
