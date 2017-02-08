@@ -116,3 +116,42 @@ For this assignment I've been doing some research on the pros and cons of buildi
 - (1.6) http://moveelo.com/blog/why-you-should-stop-using-jquery-for-everything
 - (1.7) http://www.eikospartners.com/blog/multi-page-web-applications-vs.-single-page-web-applications
 - (1.8) https://www.uxpin.com/studio/blog/single-page-vs-multi-page-ui-design-pros-cons/
+
+## Annotations lesson 2 - 08/02/2017
+This are the annotations of the second lesson Web App From Scratch.
+
+### Constructor function
+
+- Using a **constructor function** it's possible to create an **object type** that can be used multiple times. In that way you won't have to define that object for every instance.
+
+```javascript
+function CarModels(model,year,miles) {
+  this.model = model;
+  this.year = year;
+  this.miles = miles;
+}
+```
+
+- The example above is an constructor function. Using the function, its easy to make multiple instances as showed in the example below.
+
+```javascript
+var volkswagen = new CarModels("Volkswagen Golf", 2016, 1400);
+```
+
+- The variable 'volkswagen' is filled with an object containing the name of the car, the year it was build and the amount of miles driven.
+
+### Prototype function
+
+- Using a prototype function, it's possible to create an function that can be used by every instance of the object it is used on. It's important to declare the instances below the prototype function.
+
+```javascript
+CarModels.prototype.toString = function() {
+  return "This " + this.model + " from " + this.year + " has driven " + this.miles + " miles";
+};
+```
+
+- The function above is now available for every instance of the CarModels object. In the example below you can see how the prototype function can be called.
+
+```javascript
+volkswagen.toString()
+```
