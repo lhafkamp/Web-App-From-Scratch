@@ -13,7 +13,7 @@ nav {
   top: 0;
 }
 
-nav .nav_item {
+nav li {
   padding: .75em;
   background-color: white;
   color: black;
@@ -40,21 +40,24 @@ nav li a {
   display: none;
 }
 
-.section {
+section {
   height: 100vh;
   text-align: center;
 }
 
 .intro {
   background-color: #3498db;
-  color: white;
 }
 
 .main_content {
   background-color: #e74c3c;
-  color: white;
 }
 
-.page_title {
-  padding-top: 30vh;
+.test_content {
+  background-color: #f39c12;
+}
+
+h1 {
+  padding-top: 30%;
+  color: white;
 }

@@ -1,41 +1,37 @@
 (function() {
   "use strict";
+  var allSections = document.querySelectorAll('section');
 
   var app = {
     init: function() {
+      // First make sure that only the intro page is visible
+      allSections.forEach(function(section) {
+        if('#' + section.id != "#introduction") {
+          section.classList.add('hidden');
+        }
+      });
       routes.init();
     }
   };
 
   var routes = {
     init: function() {
-      // Object that stores all location data
-      var oldHash = window.location.hash;
-      var newHash = oldHash;
-      if(!newHash) {
-        newHash = "#introduction";
-      }
-      // Check for changes in hash, then run this function
       window.onhashchange = function() {
-        oldHash = newHash;
-        newHash = window.location.hash;
-        var route = {
-          old: oldHash,
-          new: newHash
-        };
-        // Send hash data to the sections toggle function.
-        sections.toggle(route);
+        sections.toggle();
       }
     }
   };
 
   var sections = {
-    toggle: function(route) {
+    toggle: function() {
       // Toggle old hash to display none, the new one to display block
-      var oldView = document.querySelector(route.old);
-      var newView = document.querySelector(route.new);
-      oldView.classList.add('hidden');
-      newView.classList.remove('hidden');
+      allSections.forEach(function(section) {
+        if('#' + section.id === window.location.hash) {
+          section.classList.remove('hidden');
+        } else {
+          section.classList.add('hidden');
+        }
+      });
     }
   };
 
@@ -48,5 +44,7 @@
 /* Sources:
 
 - http://www.w3schools.com/jsref/event_onhashchange.asp
+- Idea for the forEach loop from Dave Bitter
+- Pull request edits by Timo Verkroost & Colin Dorr
 
 */
