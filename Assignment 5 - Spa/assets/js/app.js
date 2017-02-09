@@ -9,9 +9,8 @@
 
   var routes = {
     init: function() {
-      var location = window.location;
       // Object that stores all location data
-      var oldHash = location.hash;
+      var oldHash = window.location.hash;
       var newHash = oldHash;
       if(!newHash) {
         newHash = "#introduction";
@@ -19,7 +18,7 @@
       // Check for changes in hash, then run this function
       window.onhashchange = function() {
         oldHash = newHash;
-        newHash = location.hash;
+        newHash = window.location.hash;
         var route = {
           old: oldHash,
           new: newHash
