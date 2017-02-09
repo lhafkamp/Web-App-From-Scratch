@@ -45,3 +45,9 @@
 
   }()
 );
+
+/* Sources:
+
+- http://www.w3schools.com/jsref/event_onhashchange.asp
+
+*/
