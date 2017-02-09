@@ -1,6 +1,9 @@
 # Web-App-From-Scratch
 This readme contains all documentation and annotations made during the course.
 
+## Links to Github Pages
+[Click here for Assignment 6 - Spa](https://camille500.github.io/Web-App-From-Scratch/Assignment%205%20-%20Spa/index.html)
+
 ## Annotations lesson 1 - 06/02/2017
 
 This are the annotations of the first lesson Web App From Scratch. The annotations are part of the live coding example in class: http://codepen.io/Razpudding/pen/XpBbXa?editors=1010
