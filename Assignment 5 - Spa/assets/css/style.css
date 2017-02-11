@@ -1,39 +1,13 @@
 * {
   margin: 0;
   padding: 0;
+  border: none;
   font-family: 'Open Sans', sans-serif;
 }
 
-nav {
-  height: 7vh;
-  width: 100%;
-  padding: .75em 0 0 .75em;
-  background-color: #ecf0f1;
-  position: fixed;
-  top: 0;
-}
-
-nav li {
-  padding: .75em;
-  background-color: white;
-  color: black;
-  list-style: none;
-  display: inline-block;
-  border-radius: .2em;
-}
-
-nav .active {
-  background-color: #95a5a6;
-}
-
-nav ul li:hover {
-  background-color: rgb(231, 231, 231);
-}
-
-nav li a {
-  font-size: 1.2em;
-  color: black;
-  text-decoration: none;
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
 }
 
 .hidden {
@@ -57,7 +31,100 @@ section {
   background-color: #f39c12;
 }
 
-h1 {
-  padding-top: 30%;
+section > h1 {
+  padding-top: 20%;
   color: white;
+}
+
+nav.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 1em 1em .5em 1em;;
+  background-color: #ecf0f1;
+}
+
+nav.navigation > h1 {
+  color: #2c3e50;
+  margin-top: 1.35em;
+  font-size: 1.3em;
+}
+
+nav.navigation > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /*flex-wrap: wrap;*/
+  list-style: none;
+}
+
+nav.navigation ul li > a {
+  display: block;
+  padding: .8em 1.65em;
+  margin-right: 1em;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav.navigation ul li > ul {
+  position: absolute;
+  display: none;
+  padding: 0;
+  list-style: none;
+}
+
+nav.navigation ul li ul li > a {
+  max-width: 100%;
+  padding-right: 1em;
+  background-color: #219ef2;
+  color: white;
+}
+
+nav.navigation ul li > [aria-label="Home, current page"] {
+  background-color: #e74c3c;
+  color: white;
+}
+
+nav.navigation ul li > a:hover,
+nav.navigation ul li ul li > a:hover {
+  background-color: #2980b9;
+}
+
+nav.navigation ul li.dropdown:hover > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 41.75em) {
+  nav.navigation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav.navigation > ul {
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0;
+  }
+  nav.navigation ul li > ul {
+    position: static;
+  }
 }

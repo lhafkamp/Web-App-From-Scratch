@@ -13,15 +13,23 @@
 
   <body>
 
-    <nav>
-
+    <!-- NAVIGATION -->
+    <nav class="navigation">
       <ul>
-        <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#content">Best practices</a></li>
-        <li><a href="#extra">Extra page</a></li>
+        <li><a href="#introduction" aria-label="introduction">Home</a></li>
+        <li><a href="#content" aria-label="content">Best practices</a></li>
+        <li><a href="#extra" aria-label="extra">Extra</a></li>
+        <li class="dropdown">
+          <a href="#">Submenu</a>
+          <ul>
+            <li><a href="#chat">Sub-item 1</a></li>
+            <li><a href="#login">Sub-item 2</a></li>
+            <li><a href="#media-item">Sub-item 3</a></li>
+          </ul>
+          </li>
       </ul>
-
     </nav>
+    <!-- END NAVIGATION -->
 
     <section class="intro" id="introduction">
 
@@ -31,13 +39,13 @@
 
     <section class="main_content" id="content">
 
-      <h1>Content</h1>
+      <h1>Best practices</h1>
 
     </section>
 
     <section class="test_content" id="extra">
 
-      <h1>Test</h1>
+      <h1>Extra content</h1>
 
     </section>
 
