@@ -52,6 +52,19 @@ greetStudent('Camillos');
 logStudentInfo(student.name, student.age);
 console.log('------------------------------');
 
+/* CONSTRUCTOR FUNCTIONS
+--------------------------------------------------- */
+// console.log('Constructor functions:')
+//
+// let Car = data => {
+//   this.model = data.model;
+//   this.miles = data.miles;
+// }
+//
+// let audi = new Car({model: 'Audi A3', miles: 2500}); // Creates an new car via the constructor function
+//
+// console.log('------------------------------');
+
 /* DEFAULT PARAMETERS
 --------------------------------------------------- */
 console.log('Default parameters:')
@@ -114,5 +127,84 @@ let { title, childObject: { title: childTitle } } = parentObject;  // Save the t
 
 console.log(healthy, alcohol, sugar);
 console.log(childTitle);
+
+console.log('------------------------------');
+
+/* OBJECT PROPERTY SHORTHAND
+--------------------------------------------------- */
+console.log('Object propery shorthand:')
+
+const submitRating = (name, comments, rating = 5) => {
+  let data = {name, comments, rating}; // Shorthand for object properties
+  for (let key in data) {
+    console.log(key + ': ', data[key]);
+  }
+}
+
+const logAllRatings = () => {
+  const ratings = [
+    { name: 'Kevin', comment: 'Awesome!', rate: 8},
+    { name: 'Camille', comment: 'Whuuut..!', rate: 6},
+    { name: 'Anna', comment: 'Great movie!', rate: 9},
+    { name: 'Tim', comment: 'Super wauw!', rate: 7}
+  ];
+
+  for (let rating of ratings) {    // It doesn't loop over all instances now, but quits if its conditions are met.
+    if(rating.name === 'Camille') {
+      console.log(rating.rate);
+      break; // Code stops here as soon as 'Camille' rating is found.
+    }
+  }
+}
+
+submitRating('Camille', 'Nice Movie', 4);
+logAllRatings();
+console.log('------------------------------');
+
+/* SET
+--------------------------------------------------- */
+console.log('Set:')
+
+let classroom = new Set();  // new Set object
+
+let stevenJ = { name: 'Steven', age: 22 },
+    sarah = { name: 'Sarah', age: 25 };
+
+classroom.add(stevenJ); // adds steven to the classroom object
+classroom.add(sarah);
+
+if(classroom.has(stevenJ)) console.log('StevenJ is present');  // .has checks if stevenJ is added to classroom. (TRUE)
+console.log('Classroom size:', classroom.size); // Returns total amount of objects stored in the set object
+
+classroom.delete(stevenJ); // Deletes stevenJ from the Set object
+console.log('Classroom size:', classroom.size);
+
+let arrayOfStudents = Array.from(classroom);
+console.log(arrayOfStudents);
+
+let alumni = new Set(arrayOfStudents); // Creates an Set object from the array
+console.log(alumni);
+
+console.log('------------------------------');
+
+/* MAP
+--------------------------------------------------- */
+console.log('Map:')
+
+var secondClassroom = new Map();
+secondClassroom.set('stevenJ', stevenJ);
+secondClassroom.set('sarah', sarah);
+console.log(secondClassroom.size);
+
+if(secondClassroom.has('stevenJ')) console.log('Steven J is insidee!');
+console.log('Sarah:', secondClassroom.get('sarah'));
+
+for (let student of secondClassroom) {
+  console.log(`'${student[0]}': ${student[1].name} is ${student[1].age} years old.`);
+}
+
+console.log(secondClassroom.values);
+
+secondClassroom.clear() // Empties the object
 
 console.log('------------------------------');
