@@ -9,6 +9,10 @@
   const movieList = document.getElementsByClassName('movie_list')[0];
   const movieSingle = document.getElementsByClassName('movie_single')[0];
 
+  const App = {
+
+  }
+
   const getData = {
     get(filter) {
       const request = new XMLHttpRequest();
@@ -44,25 +48,29 @@
     cleanList(data) {
       data.results.map(function(el) {
         el.backdrop_path = `https://image.tmdb.org/t/p/w500/${el.backdrop_path}`;
-        el.id = `ID: ${el.id}`;
       });
-      let attributes = { movie_image: { src: function() { return this.backdrop_path; }, alt: function() { return this.title; }}};
+      let attributes = { movie_image: { src: function() { return this.backdrop_path; }, alt: function() { return this.title; }},
+                         title_url: { href: function() { return `#movie/${this.id}`; }}};
       showData.list(data.results, attributes);
     },
 
     cleanSingle(data) {
-      data.backdrop_path = `https://image.tmdb.org/t/p/w500/${data.backdrop_path}`;
-      let attributes = { movie_image: { src: function() { return this.backdrop_path; }, alt: function() { return this.title; }}};
+      data.poster_path = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
+      let attributes = { movie_image: { src: function() { return this.poster_path; }, alt: function() { return this.title; }}};
       showData.single(data, attributes);
     }
   };
 
   const showData = {
     list(cleanedData, attributes) {
+      sections[1].classList.remove('hidden');
+      sections[2].classList.add('hidden');
       Transparency.render(movieList, cleanedData, attributes);
     },
 
     single(cleanedData, attributes) {
+      sections[2].classList.remove('hidden');
+      sections[1].classList.add('hidden');
       Transparency.render(movieSingle, cleanedData, attributes);
     }
   };
