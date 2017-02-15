@@ -97,6 +97,10 @@ nav a {
   margin-top: 1em;
 }
 
+.budget {
+  color: #27ae60;
+}
+
 li.name {
   padding: .5em;
   display: inline;

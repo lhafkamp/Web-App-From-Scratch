@@ -56,8 +56,17 @@
 
     cleanSingle(data) {
       data.poster_path = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
+      data.budget = this.formatCurrency(data.budget);
+      data.imdb_id = `http://www.imdb.com/title/tt2034800/${data.imdb_id}`;
       let attributes = { movie_image: { src: function() { return this.poster_path; }, alt: function() { return this.title; }}};
       showData.single(data, attributes);
+    },
+
+    formatCurrency(amount) {
+      amount = amount.toFixed(0).replace(/./g, function(c, i, a) {
+        return i && c !== "." && ((a.length - i) % 3 === 0) ? '.' + c : c;
+      });
+      return `€${amount},-`;
     }
   };
 
