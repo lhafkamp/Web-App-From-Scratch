@@ -1,6 +1,7 @@
 /* Sources:
   - http://handlebarsjs.com/
   - http://projects.jga.me/routie/
+  - http://stackoverflow.com/questions/149055/how-can-i-format-numbers-as-money-in-javascript
 */
 
 (() => {
@@ -57,8 +58,9 @@
     cleanSingle(data) {
       data.poster_path = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
       data.budget = this.formatCurrency(data.budget);
-      data.imdb_id = `http://www.imdb.com/title/tt2034800/${data.imdb_id}`;
-      let attributes = { movie_image: { src: function() { return this.poster_path; }, alt: function() { return this.title; }}};
+      data.imdb_id = `http://www.imdb.com/title/${data.imdb_id}`;
+      let attributes = { movie_image: { src: function() { return this.poster_path; }, alt: function() { return this.title; }},
+                         imdb_url: { href: function() { return this.imdb_id }}};
       showData.single(data, attributes);
     },
 
