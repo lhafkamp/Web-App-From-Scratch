@@ -4,6 +4,9 @@
   - http://stackoverflow.com/questions/149055/how-can-i-format-numbers-as-money-in-javascript
 */
 
+// Laurens pointed out to me last week that using an arrow function for IIFE might not be the best idea
+// >> https://jack.ofspades.com/es6-iife-with-fat-arrow-functions/
+
 (() => {
   "use strict"
   const movieList = document.getElementsByClassName('movie_list')[0];
