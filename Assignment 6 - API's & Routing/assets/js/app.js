@@ -6,12 +6,15 @@
 
 (() => {
   "use strict"
-  const sections = document.querySelectorAll('section');
   const movieList = document.getElementsByClassName('movie_list')[0];
   const movieSingle = document.getElementsByClassName('movie_single')[0];
 
   const App = {
-
+    init() {
+      if(!window.location.hash) {
+        window.location.hash = 'trending';
+      }
+    }
   }
 
   const getData = {
@@ -58,7 +61,9 @@
     cleanSingle(data) {
       data.poster_path = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
       data.budget = this.formatCurrency(data.budget);
+      data.runtime = `${(data.runtime / 60).toFixed(1)} uur`;
       data.imdb_id = `http://www.imdb.com/title/${data.imdb_id}`;
+      data.production_companies.name = 'hola'
       let attributes = { movie_image: { src: function() { return this.poster_path; }, alt: function() { return this.title; }},
                          imdb_url: { href: function() { return this.imdb_id }}};
       showData.single(data, attributes);
@@ -74,14 +79,14 @@
 
   const showData = {
     list(cleanedData, attributes) {
-      sections[1].classList.remove('hidden');
-      sections[2].classList.add('hidden');
+      movieList.classList.remove('hidden');
+      movieSingle.classList.add('hidden');
       Transparency.render(movieList, cleanedData, attributes);
     },
 
     single(cleanedData, attributes) {
-      sections[2].classList.remove('hidden');
-      sections[1].classList.add('hidden');
+      movieSingle.classList.remove('hidden');
+      movieList.classList.add('hidden');
       Transparency.render(movieSingle, cleanedData, attributes);
     }
   };
@@ -104,5 +109,6 @@
     }
   });
 
+  App.init();
 
 })();
